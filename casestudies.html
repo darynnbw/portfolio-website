@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Learn more about my case studies — 416Toronto and Creative Works.">
+    <title>Case studies</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aguilar" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rethink" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="header-content">
+        <h1 class="logo"><a href="index.html">Daryna Volytska</a></h1>
+
+        <!-- Desktop Navigation (hidden on mobile) -->
+        <nav class="main-nav">
+          <ul>
+            <li><a href="casestudies.html">Case studies</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contactme.html">Contact me</a></li>
+          </ul>
+        </nav>
+        <a href="#resume" class="resume-button">Resume</a>
+
+        <!-- Hamburger Menu Button -->
+        <div class="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-menu-overlay">
+      <nav class="mobile-menu">
+        <ul>
+          <li><a href="casestudies.html">Case studies</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contactme.html">Contact me</a></li>
+        </ul>
+        <span class="mobile-menu-resume">Resume</span>
+      </nav>
+    </div>
+
+    <main>
+      <div class="toronto-section">
+        <div class="toronto-image-container">
+          <a href="casestudy1.html">
+          <img
+            class="toronto-main-image"
+            src="images/casestudy1.jpg"
+            alt="Hero image showcasing the 416Toronto app interface over a Toronto skyline background"
+          />
+          </a>
+        </div>
+        <div class="toronto-bottom-bar">
+          <div class="toronto-brand-name">
+            <a href="casestudy1.html">416Toronto</a>
+          </div>
+          <div class="toronto-year-display">2025</div>
+        </div>
+      </div>
+      <div class="studybuddy-section">
+        <div class="toronto-image-container">
+          <a href="casestudy2.html">
+          <img
+            class="toronto-main-image"
+            src="images/casestudy2.png"
+            alt="CreativeWorks mockup"
+          />
+          </a>
+        </div>
+        <div class="toronto-bottom-bar">
+          <div class="toronto-brand-name">
+            <a href="casestudy2.html">CreativeWorks</a>
+          </div>
+          <div class="toronto-year-display">2024</div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-nav">
+          <a href="casestudies.html">Case studies</a>
+          <a href="about.html">About</a>
+          <a href="contactme.html">Contact me</a>
+          <a href="index.html">Resume</a>
+        </div>
+        <div class="footer-contact">
+          <div class="contact-header">
+            <h3>Let's get in touch!</h3>
+            <svg class="star-icon" width="24" height="24" viewBox="0 0 24 24">
+              <path
+                d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"
+              ></path>
+            </svg>
+          </div>
+          <a href="mailto:volytska.daryna@gmail.com" class="contact-link">
+            Email
+            <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24">
+              <path d="M5 12H19M19 12L12 5M19 12L12 19"></path>
+            </svg>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/daryna-volytska-aa2974289/"
+            class="contact-link"
+          >
+            LinkedIn
+            <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24">
+              <path d="M5 12H19M19 12L12 5M19 12L12 19"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="copyright">Copyright © Daryna Volytska. 2025</div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+      const hamburger = document.querySelector(".hamburger-menu");
+      const mobileOverlay = document.querySelector(".mobile-menu-overlay");
+      const mobileMenu = document.querySelector(".mobile-menu");
+
+      // Toggle mobile menu open/close
+      hamburger.addEventListener("click", function () {
+        this.classList.toggle("active");
+        mobileOverlay.classList.toggle("active");
+        mobileMenu.classList.toggle("active");
+        document.body.style.overflow = this.classList.contains("active") ? "hidden" : "";
+      });
+
+      // Close mobile menu on link click
+      const mobileLinks = document.querySelectorAll(".mobile-menu a");
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          hamburger.classList.remove("active");
+          mobileOverlay.classList.remove("active");
+          mobileMenu.classList.remove("active");
+          document.body.style.overflow = "";
+        });
+      });
+    </script>
+  </body>
+</html>
